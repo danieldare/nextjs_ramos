@@ -1,5 +1,7 @@
-import { motion, useAnimation, useInView, Variant } from "framer-motion";
-import { useEffect, useRef } from "react";
+"use client";
+
+import { motion, useInView, Variant } from "framer-motion";
+import { useRef } from "react";
 import { Reveal } from "./reveal";
 
 type AnimatedTextProps = {

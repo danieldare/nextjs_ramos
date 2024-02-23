@@ -10,7 +10,7 @@ import { Footer } from "./sections/footer";
 
 export default function Home() {
   return (
-    <main className="bg-white max-w-[1380px] mx-auto rounded-3xl m-3 pt-3">
+    <main className="bg-white max-w-[1380px] mx-auto rounded-3xl m-3 pt-3 overflow-hidden">
       <Navbar />
       <Hero />
       <Analytics />

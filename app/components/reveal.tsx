@@ -1,17 +1,17 @@
 "use client";
 
 import { useInView, motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export const Reveal = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: false, margin: "10px" });
 
   return (
-    <div ref={ref} className="relative overflow-hidden inline-block">
+    <div ref={ref} className="relative overflow-hidden inline-flex">
       <motion.div
         variants={{
-          hidden: { opacity: 0, translateY: 80, transition: { duration: 0.25 } },
+          hidden: { opacity: 0, translateY: 100 },
           visible: {
             opacity: 1,
             translateY: 0,
