@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { MotionProps, motion } from "framer-motion";
 import { StaggeringAnimatedText } from "@/app/components/stagerring-animated-text";
+import { Reveal } from "@/app/components/reveal";
 
 type AnimatedIconProps = {
   children: React.ReactNode;
@@ -26,7 +27,7 @@ export const Hero = () => {
     <section className="bg-white h-screen flex justify-center items-center px-4">
       <div className="hero-container flex justify-between items-center py-12 md:py-24">
         <div className="hero-text">
-          <motion.h1 className="text-[115px] leading-[140px] font-medium  tracking-tight text-gray-900 mb-4">
+          <div className="text-[115px] leading-[140px] font-medium  tracking-tight text-gray-900 mb-4">
             <div className="flex items-center">
               <div className="flex flex-col  mr-6">
                 <div className="flex items-center self-end">
@@ -36,20 +37,13 @@ export const Hero = () => {
                   <AnimatedIcon className="inline-flex h-[100px] w-[100px] bg-[#FE4A22] rounded-full justify-center items-center">
                     <Image alt="orange" src="/images/orange-icon.png" width={70} height={70} />
                   </AnimatedIcon>
-                  <motion.span
-                    initial={{ height: "0", opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                  >
-                    <StaggeringAnimatedText text={["Analytics"]} />
-                  </motion.span>
+
+                  <StaggeringAnimatedText text={["Analytics"]} />
                 </div>
                 <div className="block translate-x-[-50px]">
-                  <StaggeringAnimatedText className="inline-block" text={["that"]} />
-                  <StaggeringAnimatedText
-                    className="text-[#CCCCCC] inline-block"
-                    text={["helps"]}
-                  />
-                  <StaggeringAnimatedText className="inline-block" text={["you"]} />
+                  <StaggeringAnimatedText text={["that"]} />
+                  <StaggeringAnimatedText className="text-[#CCCCCC]" text={["helps"]} />
+                  <StaggeringAnimatedText className="" text={["you"]} />
                 </div>
               </div>
               <div className="relative">
@@ -78,7 +72,7 @@ export const Hero = () => {
               </AnimatedIcon>
               <StaggeringAnimatedText text={["the future"]} />
             </div>
-          </motion.h1>
+          </div>
         </div>
       </div>
     </section>

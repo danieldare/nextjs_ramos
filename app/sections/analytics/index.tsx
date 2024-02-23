@@ -2,6 +2,7 @@
 
 import { AnimatedCounter } from "@/app/components/animated-counter";
 import AnimatedProgressBar from "@/app/components/animated-progress-bar";
+import { Reveal } from "@/app/components/reveal";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -11,10 +12,12 @@ export const Analytics = () => {
     <section className="bg-[#F9F9F9] rounded-t-[100px]  h-screen flex items-center justify-center">
       <div className="max-w-[1300px] mx-auto">
         <div className="flex justify-between items-center">
-          <h3 className="text-4xl text-[#1A1A1A]">
-            Your Key to strategic
-            <br /> success through analytics
-          </h3>
+          <Reveal>
+            <h3 className="text-4xl text-[#1A1A1A]">
+              Your Key to strategic
+              <br /> success through analytics
+            </h3>
+          </Reveal>
           <p className="text-[18px] text-[#1A1A1A]">
             Ready for exciting , instantaneous,
             <br /> all-acceessible insights in real time?

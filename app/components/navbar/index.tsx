@@ -18,7 +18,7 @@ export const Navbar = () => {
       initial={{ translateY: "60px", opacity: 0 }}
       animate={{ translateY: "0px", opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="absolute top-3 left-3 w-[98%] mx-auto overflow-hidden bg-[#0D0D0D] p-2 flex justify-between rounded-2xl"
+      className="w-[98%] mx-auto overflow-hidden bg-[#0D0D0D] p-2 flex justify-between rounded-2xl"
     >
       <motion.div
         initial={{ translateY: "60px", opacity: 0 }}

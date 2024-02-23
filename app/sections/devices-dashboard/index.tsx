@@ -1,9 +1,29 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const variants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
 
 export const DevicesDashboard = () => {
   return (
-    <section className="bg-[#F9F9F9] rounded-t-[100px]  h-screen flex items-center justify-center">
-      <div>
+    <section className="bg-[#F9F9F9]  overflow-hidden rounded-t-[100px]  h-full">
+      <div className="max-w-[1300px] mx-auto pt-[100px]  pl-10 relative z-[2]">
         <div className="flex justify-between items-start">
           <div>
             <p className="text-4xl text-[#1A1A1A]">
@@ -16,14 +36,38 @@ export const DevicesDashboard = () => {
               <AccordionHeader title="Easy integration" />
             </div>
           </div>
-          <div className="relative">
-            <Image alt="laptop" src="/images/laptop.png" width={500} height={650} />
+
+          <div className="relative left-[40px]">
+            <div className="absolute -left-[250px] -bottom-[120px] z-10">
+              <Image
+                alt="laptop"
+                src="/images/phone.png"
+                width={322}
+                height={200}
+                className="relative left-[130px] top-0"
+              />
+            </div>
+            <div className="relative h-[780px] w-[780px] left-[]">
+              <Image alt="laptop" src="/images/laptop.png" fill className="relative" />
+            </div>
           </div>
         </div>
-        <div className="relative text-center">
-          <div className="absolute inset-0 -z-10 h-full w-full bg-[whitw] bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]" />
-          <h1 className="text-[#FE4A22] text-[300px] font-bold">Ramos</h1>
-        </div>
+      </div>
+      <div className="relative -top-[140px] -z-1   text-center h-[400px]  mx-auto bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+        <motion.h1
+          initial={{
+            opacity: 0,
+            width: 0,
+          }}
+          animate={{
+            opacity: 1,
+            width: "100%",
+          }}
+          whileInView={{ scale: 0.95 }}
+          className="text-[#FE4A22] text-[300px] font-bold"
+        >
+          Ramos
+        </motion.h1>
       </div>
     </section>
   );
