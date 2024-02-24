@@ -23,7 +23,7 @@ const variants = {
 export const DevicesDashboard = () => {
   return (
     <section className="bg-[#F9F9F9]  overflow-hidden rounded-t-[100px]  h-full">
-      <div className="max-w-[1300px] mx-auto pt-[100px]  pl-10 relative z-[2]">
+      <div className="pt-[100px]  pl-10 relative z-[2]">
         <div className="flex justify-between items-start">
           <div>
             <p className="text-4xl text-[#1A1A1A]">
@@ -47,27 +47,14 @@ export const DevicesDashboard = () => {
                 className="relative left-[130px] top-0"
               />
             </div>
-            <div className="relative h-[780px] w-[780px] left-[]">
+            <div className="relative h-[780px] w-[780px]">
               <Image alt="laptop" src="/images/laptop.png" fill className="relative" />
             </div>
           </div>
         </div>
       </div>
-      <div className="relative -top-[140px] -z-1   text-center h-[400px]  mx-auto bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-        <motion.h1
-          initial={{
-            opacity: 0,
-            width: 0,
-          }}
-          animate={{
-            opacity: 1,
-            width: "100%",
-          }}
-          whileInView={{ scale: 0.95 }}
-          className="text-[#FE4A22] text-[300px] font-bold"
-        >
-          Ramos
-        </motion.h1>
+      <div className="relative -top-[200px] -left-2 -z-1 text-center h-[400px]  mx-auto bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+        <motion.h1 className="text-[#FE4A22] text-[430px] font-bold">Ramos</motion.h1>
       </div>
     </section>
   );

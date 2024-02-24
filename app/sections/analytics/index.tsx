@@ -42,8 +42,6 @@ export const Analytics = () => {
 };
 
 const WhiteBackgroudStats = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
 
   return (
     <div className="bg-white pt-8 pl-8  border border-[#E6E6E6] rounded-[50px] shadow-xl flex justify-between items-center gap-8 overflow-hidden">
