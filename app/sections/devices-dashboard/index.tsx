@@ -102,10 +102,10 @@ const AccordionHeader = ({
       transition={{ duration: 0.5 }}
       viewport={{ amount: 0.5 }}
       exit={{ opacity: 0 }}
-      className="bg-white flex justify-between items-center py-4 px-8 rounded-3xl shadow-lg"
+      className="bg-white flex justify-between items-center py-4 px-8 rounded-3xl shadow-[#eaeaeaa7] shadow-xl"
     >
-      <p className="text-md text-[#1A1A1A]">{title}</p>
-      <button className="text-[#1A1A1A] text-lg bg-[#f0f0f0] h-[40px] w-[40px]  flex items-center justify-center rounded-full">
+      <p className="text-lg text-ramos-black">{title}</p>
+      <button className="text-ramos-black text-lg bg-[#f0f0f0] h-[40px] w-[40px]  flex items-center justify-center rounded-full">
         +
       </button>
     </motion.div>

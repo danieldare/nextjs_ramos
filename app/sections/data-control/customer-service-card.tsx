@@ -15,7 +15,7 @@ export const CustomerServiceCard = () => {
       initial="initial"
       variants={variants}
       whileInView="animate"
-      className="bg-white rounded-3xl shadow-sm flex flex-col justify-between items-center gap-4 py-8 min-w-[210px] "
+      className="bg-white rounded-3xl border border-[#F0F0F0] flex flex-col justify-between items-center gap-4 py-8 min-w-[210px] shadow-[#eaeaeaa7] shadow-xl "
     >
       <p className="text-ramos-black text-xs">Conversion rate</p>
       <ProgressPercentage text="2.3%" />
