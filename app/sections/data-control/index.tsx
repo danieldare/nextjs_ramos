@@ -31,9 +31,9 @@ export const DataControl = () => {
               </div>
             </div>
 
-            <div className="flex-1 relative p-[40px_90px] overflow-hidden rounded-3xl bg-[#F9F9F9] text-center mx-auto shadow-xl shadow-[#b0aeae27] border border-[#ededed] ">
-              <div className="absolute w-full h-1/2 bg-[#F9F9F9] top-0 left-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]" />
-              <div className="bg-[#FBFBFB] w-[80%] mx-auto -z-2 rounded-t-2xl p-5 border border-[#EEEEEE] shadow-xl shadow-[#e1dcdc31] flex justify-center items-end gap-16">
+            <div className="flex-1 relative p-[40px_90px] z-10 overflow-hidden rounded-3xl bg-[#F9F9F9] text-center mx-auto shadow-xl shadow-[#b0aeae27] border border-[#ededed] ">
+              <div className="absolute w-full h-1/2 -z-10 bg-[#F9F9F9] top-0 left-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]" />
+              <div className="bg-[#FBFBFB] relative w-[80%] mx-auto -z-2 rounded-t-2xl p-5 border border-[#EEEEEE] shadow-xl shadow-[#e1dcdc31] flex justify-center items-end gap-16">
                 {""}
               </div>
               <div className="bg-[#FBFBFB] w-[90%] relative -top-[20px] mx-auto -z-1 rounded-t-2xl p-3  border border-[#EEEEEE] shadow-xl shadow-[#e1dcdc31] flex justify-starrt items-end gap-16">

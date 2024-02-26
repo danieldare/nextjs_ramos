@@ -25,8 +25,23 @@ export const MonitoringIndicators = () => {
 
 const BarChart = () => {
   return (
-    <div className="flex">
-      <div className="flex justify-center gap-3 items-end">
+    <div className="flex relative">
+      <motion.div
+        initial={{ width: "0", opacity: 0 }}
+        whileInView={{ width: "150px", opacity: 1 }}
+        transition={{ duration: 0.7, delay: 2 }}
+        viewport={{ once: false }}
+        className="absolute w-[150px] h-[100px] top-[-50px] -left-[0px]"
+      >
+        <Image
+          alt="user-connecting"
+          src="/images/graph-line.png"
+          width={150}
+          height={100}
+          objectFit="contain"
+        />
+      </motion.div>
+      <div className="flex justify-center gap-3 items-end max-h-[200px]">
         <BarChartItem bgColor="#E6E6E6" year="2021" height="60" />
         <BarChartItem bgColor="#E6E6E6" year="2020" height="25" />
         <BarChartItem bgColor="#E6E6E6" year="2019" height="60" />
