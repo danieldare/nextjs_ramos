@@ -9,7 +9,7 @@ import Image from "next/image";
 export const Analytics = () => {
   return (
     <section>
-      <Reveal className="bg-[#F9F9F9] rounded-t-[100px]  h-full py-[85px] flex flex-col items-center justify-center">
+      <Reveal className="bg-[#F9F9F9] rounded-[100px]  h-full py-[85px] flex flex-col items-center justify-center">
         <div className="px-12 mx-auto w-full">
           <Reveal className="flex justify-between items-center">
             <h3 className="text-[40px] text-[#1A1A1A] leading-[45px]">
@@ -106,6 +106,19 @@ const WhiteBackgroudStats = () => {
         </div>
         <div className="relative">
           <Image alt="graph" src="/images/graph.png" width={270} height={0} objectFit="cover" />
+          <div className="px-[15px] py-[5px] flex flex-col justify-between absolute bottom-[16px] right-[19px] h-[64px] w-[100px] rounded-2xl bg-ramos-orange">
+            <div className="flex justify-between items-center">
+              <p className="text-white text-[10px]">Rate</p>
+              <Image alt="bar-code" src="/images/pentagon.png" width={15} height={0} />
+            </div>
+            <AnimatedCounter
+              from={10}
+              to={58}
+              suffix={"%"}
+              prefix="+"
+              className="text-white text-[20px] font-light inline-flex"
+            />
+          </div>
         </div>
       </div>
     </div>

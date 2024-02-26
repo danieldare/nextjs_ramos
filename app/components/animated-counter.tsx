@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AnimationPlaybackControls, MotionProps, animate, motion, useInView } from "framer-motion";
 
-type AnimatedCounterProps = { from: number; to: number; suffix: string } & MotionProps &
+type AnimatedCounterProps = {
+  from: number;
+  to: number;
+  suffix?: string;
+  prefix?: string;
+} & MotionProps &
   React.HTMLAttributes<HTMLSpanElement>;
 
-export const AnimatedCounter = ({ from, to, suffix, ...rest }: AnimatedCounterProps) => {
+export const AnimatedCounter = ({ from, to, suffix, prefix, ...rest }: AnimatedCounterProps) => {
   const [displayValue, setDisplayValue] = useState(from);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
@@ -30,6 +35,7 @@ export const AnimatedCounter = ({ from, to, suffix, ...rest }: AnimatedCounterPr
 
   return (
     <motion.span ref={ref} {...rest}>
+      {prefix}
       {displayValue.toLocaleString()}
       {suffix}
     </motion.span>
