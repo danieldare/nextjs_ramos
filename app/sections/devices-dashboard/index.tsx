@@ -54,7 +54,7 @@ export const DevicesDashboard = () => {
         </div>
       </div>
       <div className="relative -top-[200px] -left-2 -z-1 text-center h-[400px]  mx-auto bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-        <motion.h1 className="text-[#FE4A22] text-[430px] font-bold">Ramos</motion.h1>
+        <motion.h1 className="text-[#FE4A22] text-[400px] font-bold">Ramos</motion.h1>
       </div>
     </section>
   );

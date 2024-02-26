@@ -1,3 +1,7 @@
+"use client";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export const MonitoringIndicators = () => {
   return (
     <div className="bg-white relative -top-[25px] rounded-2xl p-4 border border-[#EEEEEE] shadow-xl shadow-[#e1dcdc31] flex justify-between items-end">
@@ -28,6 +32,18 @@ const BarChart = () => {
   );
 };
 
+const variants = {
+  initial: { height: 0 },
+  animate: (height: string) => ({
+    height,
+    transition: {
+      ease: "easeInOut",
+      delay: 0.25,
+      duration: 1.2,
+    },
+  }),
+};
+
 const BarChartItem = ({
   bgColor,
   year,
@@ -37,9 +53,15 @@ const BarChartItem = ({
   year: string;
   height: string;
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
-    <div className="flex flex-col items-center">
-      <div
+    <div ref={ref} className="flex flex-col items-center">
+      <motion.div
+        variants={variants}
+        custom={`${height}px`}
+        initial="initial"
+        animate={isInView ? "animate" : "initial"}
         className={`w-[25px] rounded-md`}
         style={{ height: `${height}px`, background: bgColor }}
       />

@@ -35,12 +35,14 @@ export const SlidingText = ({ text }: { text: string }) => {
 
   return (
     <motion.div
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      transition={{ duration: 0.6 }}
       ref={containerRef}
       style={{ whiteSpace: "nowrap" }}
-      className="w-[500px] overflow-hidden
-    bg-[#FFD026] rounded-[80px] text-[115px] text-[#1A1A1A]
-    leading-[153px]
-    "
+      className="w-[500px] overflow-hidden text-extrabold  tracking-tight
+    bg-[#FFD026] rounded-[60px] text-[115px] text-[#1A1A1A]
+    leading-[153px]"
     >
       <motion.div
         variants={scrollVariants}

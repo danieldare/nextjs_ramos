@@ -3,48 +3,49 @@
 import { AnimatedCounter } from "@/app/components/animated-counter";
 import AnimatedProgressBar from "@/app/components/animated-progress-bar";
 import { Reveal } from "@/app/components/reveal";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 
 export const Analytics = () => {
   return (
-    <section className="bg-[#F9F9F9] rounded-t-[100px]  h-screen flex items-center justify-center">
-      <div className="max-w-[1300px] mx-auto">
-        <div className="flex justify-between items-center">
-          <Reveal>
-            <h3 className="text-4xl text-[#1A1A1A]">
-              Your Key to strategic
-              <br /> success through analytics
-            </h3>
-          </Reveal>
-          <p className="text-[18px] text-[#1A1A1A]">
-            Ready for exciting , instantaneous,
-            <br /> all-acceessible insights in real time?
-          </p>
+    <section className="bg-[#F9F9F9] rounded-t-[100px]  h-full py-[85px] flex flex-col items-center justify-center">
+        <div className="px-12 mx-auto w-full">
+          <div className="flex justify-between items-center">
+            <Reveal>
+              <h3 className="text-[40px] text-[#1A1A1A] leading-[45px]">
+                Your Key to strategic
+                <br /> success through analytics
+              </h3>
+            </Reveal>
+            <Reveal>
+              <p className="text-[18px] text-[#1A1A1A]">
+                Ready for exciting , instantaneous,
+                <br /> all-acceessible insights in real time?
+              </p>
+            </Reveal>
+          </div>
+          <div className="flex justify-between items-center mt-20 gap-5">
+            <WhiteBackgroudStats />
+            <BlackBackgroundWidgetControl />
+          </div>
+
+          <div className="flex justify-center items-center mt-10 max-w-[800px] gap-6 mx-auto">
+            <p className="text-[#1A1A1A] self-end text-xl">Up to</p>
+            <p className="text-8xl text-[#1A1A1A]">45%</p>
+            <p className="text-[#1A1A1A] font-extralight text-sm">
+              Increase your analytics efficiency up to 45% Unique
+              <br /> algorithms provide insights from data reduce time for analysis
+              <br /> and save time for making important informed decisions
+            </p>
+          </div>
         </div>
-        <div className="flex justify-between items-center mt-20 gap-5">
-          <WhiteBackgroudStats />
-          <BlackBackgroundWidgetControl />
-        </div>
-        <div className="flex justify-center items-center mt-10 max-w-[800px] gap-6 mx-auto">
-          <p className="text-[#1A1A1A] self-end text-xl">Up to</p>
-          <p className="text-8xl text-[#1A1A1A]">45%</p>
-          <p className="text-[#1A1A1A] font-extralight text-sm">
-            Increase your analytics efficiency y up to 45% Unique
-            <br /> algorithms provide insights from data reduce time for analysis
-            <br /> and save time for making important informed decisions
-          </p>
-        </div>
-      </div>
     </section>
   );
 };
 
 const WhiteBackgroudStats = () => {
-
   return (
-    <div className="bg-white pt-8 pl-8  border border-[#E6E6E6] rounded-[50px] shadow-xl flex justify-between items-center gap-8 overflow-hidden">
+    <div className="bg-white pt-8 pl-8  border border-[#E6E6E6] rounded-[50px] shadow-xl flex justify-between items-center gap-8 overflow-hidden flex-[60%]">
       <div className="flex flex-col self-start">
         <button className="self-start bg-[#FFD026] text-[#322D1C] rounded-lg py-2 px-3 text-xs  shadow-lg">
           Setting up reports
@@ -103,7 +104,7 @@ const WhiteBackgroudStats = () => {
 
 const BlackBackgroundWidgetControl = () => {
   return (
-    <div className="bg-black p-10 px-14 rounded-3xl shadow-xl flex flex-col items-center justify-between">
+    <div className="bg-black p-10 px-14 rounded-3xl shadow-xl flex flex-col items-center justify-between basis-[40%] self-stretch">
       <div className="flex gap-3">
         <div className="border border-[#232323] bg-[#000000] rounded-[30px]">
           <motion.div
@@ -134,7 +135,7 @@ const BlackBackgroundWidgetControl = () => {
             transition={{ duration: 0.9, delay: 0.7 }}
             className="flex flex-col h-full justify-between items-center p-4 px-7"
           >
-            <p className="text-[10px]">Transactions</p>
+            <p className="text-[10px] text-white">Transactions</p>
             <AnimatedCounter
               from={10}
               to={43}

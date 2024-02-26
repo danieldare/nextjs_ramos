@@ -1,84 +1,66 @@
 "use client";
 
-import { motion, useInView, Variant } from "framer-motion";
-import { useRef } from "react";
-import { Reveal } from "./reveal";
+import React, { useRef } from "react";
+import { Variants, motion } from "framer-motion";
 
-type AnimatedTextProps = {
-  text: string | string[];
-  el?: keyof JSX.IntrinsicElements;
-  className?: string;
-  once?: boolean;
-  repeatDelay?: number;
-  animation?: {
-    hidden: Variant;
-    visible: Variant;
-  };
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.04 * i },
+  }),
 };
 
-const defaultAnimations = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
+const childVariants: Variants = {
+  animate: {
     opacity: 1,
+    y: 0,
+    rotate: "0deg",
     transition: {
-      duration: 0.1,
+      type: "spring",
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.3,
+      delay: 0.25,
+    },
+  },
+  initial: {
+    opacity: 0,
+    y: 100,
+    rotate: "5deg",
+    transition: {
+      type: "spring",
+      ease: [0.6, 0.01, -0.05, 0.95],
     },
   },
 };
 
 export const StaggeringAnimatedText = ({
   text,
-  el: Wrapper = "span",
   className,
-  once,
-  animation = defaultAnimations,
-}: AnimatedTextProps) => {
-  const textArray = Array.isArray(text) ? text : [text];
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once });
+  el: Wrapper = "span",
+}: {
+  text: string;
+  className?: string;
+  el?: keyof JSX.IntrinsicElements;
+}) => {
+  const ref = useRef<HTMLSpanElement>(null);
 
   return (
-    <Reveal>
-      <Wrapper className={`${className} relative overflow-hidden`}>
-        <span className="sr-only">{textArray.join(" ")}</span>
-        <motion.span
-          ref={ref}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={{
-            visible: {
-              transition: {
-                type: "tween",
-                staggerChildren: 0.1,
-              },
-            },
-            hidden: {},
-          }}
-          transition={{ once: false, duration: 0.5, delay: 0.25 }}
-          aria-hidden
-        >
-          {textArray.map((line, lineIndex) => (
-            <span className="inline-block" key={`${line}-${lineIndex}`}>
-              {line.split(" ").map((word, wordIndex) => (
-                <span className="inline-block" key={`${word}-${wordIndex}`}>
-                  {word.split("").map((char, charIndex) => (
-                    <motion.span
-                      key={`${char}-${charIndex}`}
-                      className="inline-block"
-                      variants={animation}
-                    >
-                      {char}
-                    </motion.span>
-                  ))}
-                  <span className="inline-block">&nbsp;</span>
-                </span>
-              ))}
-            </span>
-          ))}
+    <motion.span
+      ref={ref}
+      className={`${className} overflow-y-hidden inline-flex`}
+      style={{ whiteSpace: "nowrap", wordSpacing: "-10px" }}
+      variants={containerVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: false, amount: 0.5 }}
+    >
+      {text.split(" ").map((word, index) => (
+        <motion.span variants={childVariants} key={`${word}-${index}`} className=" overflow-hidden">
+          {word}
+          <span className="inline-block">&nbsp;</span>
         </motion.span>
-      </Wrapper>
-    </Reveal>
+      ))}
+    </motion.span>
   );
 };

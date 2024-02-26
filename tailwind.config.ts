@@ -10,8 +10,17 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        "ramos-orange": "#FE4A23",
+        "ramos-yellow": "#FFD027",
+        "ramos-grey": "#F0F0F0",
+        "ramos-grey-100": "#CCCCCC",
+        "ramos-black": "#0D0D0D",
+      },
+      borderRadius: {
+        "4xl": "3.125rem",
       },
     },
   },

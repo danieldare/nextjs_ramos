@@ -4,6 +4,7 @@ import { MotionProps, motion } from "framer-motion";
 import { StaggeringAnimatedText } from "@/app/components/stagerring-animated-text";
 import Image from "next/image";
 import { SlidingText } from "./sliding-text";
+import { Button } from "@/app/components/button";
 
 type AnimatedIconProps = {
   children: React.ReactNode;
@@ -12,9 +13,9 @@ type AnimatedIconProps = {
 const AnimatedScaleIcon = ({ children, ...props }: AnimatedIconProps) => {
   return (
     <motion.span
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, delay: 0.5 }}
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      transition={{ duration: 0.6 }}
       {...props}
     >
       {children}
@@ -28,7 +29,7 @@ export const ProductBriefDemo = () => {
       <div className="max-w-[1300px] mx-auto">
         <h1 className="text-[115px] leading-[140px] font-medium  tracking-tight text-gray-900 mb-4">
           <StaggeringAnimatedText text="Maximize" />
-          <StaggeringAnimatedText className="text-[#CCCCCC]" text={["efficiency"]} /> <br />{" "}
+          <StaggeringAnimatedText className="text-[#CCCCCC]" text={"efficiency"} /> <br />{" "}
           <StaggeringAnimatedText text="with our inituitive" />
         </h1>
         <div className="mt-10 flex justify-between items-center">
@@ -55,12 +56,8 @@ export const ProductBriefDemo = () => {
           </p>
 
           <div className="flex items-center gap-2">
-            <button className="bg-[#F2F2F2]  text-[#1A1A1A] text-xs rounded-md py-3 px-8">
-              Request a demo
-            </button>
-            <button className="bg-[#FE4A22] text-white text-xs rounded-md py-3 px-8">
-              Start for free
-            </button>
+            <Button variant="secondary">Request a demo</Button>
+            <Button variant="primary">Start for free</Button>
           </div>
         </div>
       </div>
