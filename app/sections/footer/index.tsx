@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black pt-[100px] pb-20">
+    <footer className="bg-black pt-[50px]">
       <div className="max-w-[1300px] mx-auto p-10">
         <Reveal delay={0.1} className="flex justify-between items-center text-white ">
           <ul className="flex gap-8 text-ramos-grey-100">

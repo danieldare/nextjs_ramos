@@ -1,6 +1,5 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 export const MonitoringIndicators = () => {
   return (
@@ -53,16 +52,15 @@ const BarChartItem = ({
   year: string;
   height: string;
 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
   return (
-    <div ref={ref} className="flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <motion.div
         variants={variants}
         custom={`${height}px`}
         initial="initial"
-        animate={isInView ? "animate" : "initial"}
+        whileInView={"animate"}
         className={`w-[25px] rounded-md`}
+        viewport={{ once: false }}
         style={{ height: `${height}px`, background: bgColor }}
       />
       <p className="text-[8px] text-[#d7d6d6] mt-2">{year}</p>

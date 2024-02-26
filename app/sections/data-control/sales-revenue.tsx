@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { ProgressTripleBar } from "./progress-triple-bar";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { AnimatedCounter } from "@/app/components/animated-counter";
 
 const variants = {
@@ -12,13 +11,10 @@ const variants = {
 };
 
 export const SalesRevenue = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
   return (
     <motion.div
-      ref={ref}
-      animate={isInView ? "animate" : "initial"}
+      initial="initial"
+      whileInView="animate"
       variants={variants}
       className="bg-white min-w-[210px] rounded-3xl shadow-md relative top-[20px] -left-[20px] flex flex-col justify-between items-start gap-2 px-3 py-4"
     >

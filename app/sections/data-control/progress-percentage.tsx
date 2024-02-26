@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 
 const progressBarVariants = {
   initial: { width: "0%" },
@@ -15,16 +15,14 @@ const progressBarVariants = {
 };
 
 export const ProgressPercentage = ({ text }: { text: string }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
-
   return (
-    <div ref={ref} className="p-5 relative overflow-hidden h-full">
+    <div className="p-5 relative overflow-hidden h-full">
       <motion.div
         className="absolute -z-[1px] left-0 top-0 h-full w-full bg-[#FFD026] rounded-2xl"
         variants={progressBarVariants}
         initial="initial"
-        animate={isInView ? "animate" : "initial"}
+        whileInView={"animate"}
+        viewport={{ once: false }}
       />
       <p className="relative z-10 text-[#1A1A1A] text-5xl">{text}</p>
     </div>
