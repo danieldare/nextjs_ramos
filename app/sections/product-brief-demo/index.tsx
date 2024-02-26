@@ -54,7 +54,7 @@ export const ProductBriefDemo = () => {
             initial={{ y: 30 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-[#1A1A1A] "
+            className="text-ramos-black"
           >
             Explore traffic sources page behaviour , conversions and more to gain deep insight
             <br /> into your audience. Withus, your business donesn't just adapt - it evolves
