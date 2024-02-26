@@ -27,7 +27,7 @@ export const ProductBriefDemo = () => {
   return (
     <section className="bg-white p-10">
       <div className="max-w-[1300px] mx-auto">
-        <h1 className="text-[115px] leading-[140px] font-medium  tracking-tight text-gray-900 mb-4">
+        <h1 className="text-[105px] leading-[110px] font-medium  tracking-tight text-gray-900 mb-4">
           <StaggeringAnimatedText text="Maximize" />
           <StaggeringAnimatedText className="text-[#CCCCCC]" text={"efficiency"} /> <br />{" "}
           <StaggeringAnimatedText text="with our inituitive" />
@@ -50,10 +50,15 @@ export const ProductBriefDemo = () => {
 
         <hr className="my-14" />
         <div className="flex justify-between items-center mt-10">
-          <p className="text-[#1A1A1A] ">
+          <motion.p
+            initial={{ y: 30 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-[#1A1A1A] "
+          >
             Explore traffic sources page behaviour , conversions and more to gain deep insight
             <br /> into your audience. Withus, your business donesn't just adapt - it evolves
-          </p>
+          </motion.p>
 
           <div className="flex items-center gap-2">
             <Button variant="secondary">Request a demo</Button>

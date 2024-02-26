@@ -37,11 +37,9 @@ const childVariants: Variants = {
 export const StaggeringAnimatedText = ({
   text,
   className,
-  el: Wrapper = "span",
 }: {
   text: string;
   className?: string;
-  el?: keyof JSX.IntrinsicElements;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
 
@@ -49,7 +47,7 @@ export const StaggeringAnimatedText = ({
     <motion.span
       ref={ref}
       className={`${className} overflow-y-hidden inline-flex`}
-      style={{ whiteSpace: "nowrap", wordSpacing: "-10px" }}
+      style={{ whiteSpace: "nowrap" }}
       variants={containerVariants}
       initial="initial"
       whileInView="animate"

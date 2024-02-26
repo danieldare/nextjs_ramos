@@ -41,7 +41,7 @@ export const SlidingText = ({ text }: { text: string }) => {
       ref={containerRef}
       style={{ whiteSpace: "nowrap" }}
       className="w-[500px] overflow-hidden text-extrabold  tracking-tight
-    bg-[#FFD026] rounded-[60px] text-[115px] text-[#1A1A1A]
+    bg-[#FFD026] rounded-[60px] text-[105px] text-[#1A1A1A]
     leading-[153px]"
     >
       <motion.div

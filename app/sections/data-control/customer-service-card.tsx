@@ -23,7 +23,7 @@ export const CustomerServiceCard = () => {
     >
       <p className="text-[#1A1A1A] text-xs">Conversion rate</p>
       <ProgressPercentage text="2.3%" />
-      <p className="text-[#bdbcbc] text-xs">
+      <p className="text-ramos-grey-100 text-xs font-light">
         Percentage of
         <br /> website visitors
       </p>

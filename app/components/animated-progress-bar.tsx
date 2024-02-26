@@ -5,7 +5,7 @@ const AnimatedProgressBar = ({ duration = 1.5 }) => {
   const progressBarVariants = {
     initial: { width: 0 },
     animate: {
-      width: "30%", 
+      width: "35%",
       transition: {
         duration: duration,
         ease: "easeInOut",
@@ -25,7 +25,7 @@ const AnimatedProgressBar = ({ duration = 1.5 }) => {
   }, [controls, isInView]);
 
   return (
-    <div ref={ref} className="h-[3px] w-full bg-[#d4d4d4] rounded-[10px] overflow-hidden">
+    <div ref={ref} className="h-[2.5px] w-full bg-[#d5d5d59c] rounded-[10px] overflow-hidden">
       <motion.div
         variants={progressBarVariants}
         initial="initial"

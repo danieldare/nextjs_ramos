@@ -8,9 +8,9 @@ export const DataControl = () => {
   return (
     <section>
       <div className="max-w-[1300px] mx-auto p-10">
-        <h1 className="text-[#1A1A1A] text-[114px] leading-[140px] py-10 mb-6">
+        <h1 className="text-[#1A1A1A] text-[105px] leading-[130px] py-10 mb-6 font-medium">
           <StaggeringAnimatedText text="We give you full" /> <br />{" "}
-          <StaggeringAnimatedText className="text-[#CCCCCC]" text="control" />
+          <StaggeringAnimatedText className="text-ramos-grey-200" text="control" />
           <StaggeringAnimatedText className="" text={"over your data"} />
         </h1>
         <Reveal>

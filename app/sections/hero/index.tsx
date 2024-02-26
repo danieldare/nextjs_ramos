@@ -26,7 +26,7 @@ export const Hero = () => {
     <section className="bg-white h-screen flex justify-center items-center px-4">
       <div className="hero-container flex justify-between items-center py-12 md:py-24">
         <div className="hero-text">
-          <div className="text-[115px] leading-[140px] font-medium  tracking-tight text-dark mb-4">
+          <div className="text-[105px] leading-[110px] font-medium  tracking-tight text-dark mb-4">
             <div className="flex items-center">
               <div className="flex flex-col  mr-6">
                 <div className="flex items-center self-end">
@@ -41,8 +41,8 @@ export const Hero = () => {
                 </div>
                 <div className="block translate-x-[-50px]">
                   <StaggeringAnimatedText text={"that"} />
-                  <StaggeringAnimatedText className="text-ramos-grey-100" text={"helps"} />
-                  <StaggeringAnimatedText className="" text={"you"} />
+                  <StaggeringAnimatedText className="text-ramos-grey-200" text={"helps"} />
+                  <StaggeringAnimatedText text={"you"} />
                 </div>
               </div>
               <div className="relative">
