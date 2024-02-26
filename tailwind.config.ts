@@ -19,6 +19,8 @@ const config: Config = {
         "ramos-grey-100": "#999999",
         "ramos-grey-200": "#CCCCCC",
         "ramos-black": "#0D0D0D",
+        "ramos-purple": "#8A5CFF",
+        "ramos-green": "#48C884",
       },
       borderRadius: {
         "4xl": "3.125rem",

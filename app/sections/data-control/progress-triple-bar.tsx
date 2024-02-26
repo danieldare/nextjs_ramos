@@ -51,19 +51,19 @@ export const ProgressTripleBar = () => {
         variants={progressBarVariants1}
         initial="initial"
         animate={isInView ? "animate" : "initial"}
-        className="h-full bg-[#48C884] rounded-2xl"
+        className="h-full bg-ramos-green rounded-2xl"
       />
       <motion.div
         variants={progressBarVariants2}
         initial="initial"
         animate={isInView ? "animate" : "initial"}
-        className="h-full bg-[#FFD026] rounded-2xl"
+        className="h-full bg-ramos-yellow rounded-2xl"
       />
       <motion.div
         variants={progressBarVariants3}
         initial="initial"
         animate={isInView ? "animate" : "initial"}
-        className="h-full bg-[#8A5CFF] rounded-2xl"
+        className="h-full bg-ramos-purple rounded-2xl"
       />
     </div>
   );

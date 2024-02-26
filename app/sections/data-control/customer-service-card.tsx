@@ -10,18 +10,14 @@ const variants = {
 };
 
 export const CustomerServiceCard = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
   return (
     <motion.div
-      ref={ref}
       initial="initial"
-      animate={isInView ? "animate" : "initial"}
       variants={variants}
+      whileInView="animate"
       className="bg-white rounded-3xl shadow-sm flex flex-col justify-between items-center gap-4 py-8 min-w-[210px] "
     >
-      <p className="text-[#1A1A1A] text-xs">Conversion rate</p>
+      <p className="text-ramos-black text-xs">Conversion rate</p>
       <ProgressPercentage text="2.3%" />
       <p className="text-ramos-grey-100 text-xs font-light">
         Percentage of
