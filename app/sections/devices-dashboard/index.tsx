@@ -12,7 +12,7 @@ export const DevicesDashboard = () => {
         <div className="flex justify-between items-start">
           <div>
             <Reveal>
-              <p className="text-4xl text-[#1A1A1A]">
+              <p className="text-4xl text-ramos-black">
                 Turning data into real
                 <br /> actions and ideas.
               </p>
