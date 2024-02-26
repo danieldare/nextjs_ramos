@@ -4,10 +4,13 @@ Website design for digital business analytic platform
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies server:
 
 ```bash
 npm install
+```
 
+then, run the development server
+```bash
 npm run dev
 ```
