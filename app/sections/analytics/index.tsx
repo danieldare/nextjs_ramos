@@ -12,7 +12,7 @@ export const Analytics = () => {
       <Reveal className="bg-[#F9F9F9] rounded-[100px]  h-full py-[85px] flex flex-col items-center justify-center">
         <div className="px-12 mx-auto w-full">
           <Reveal className="flex justify-between items-center">
-            <h3 className="text-[40px] text-[#1A1A1A] leading-[45px]">
+            <h3 className="text-[40px] text-ramos-black leading-[45px]">
               Your Key to strategic
               <br /> success through analytics
             </h3>

@@ -1,11 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export const MonitoringIndicators = () => {
   return (
     <div className="bg-white relative -top-[25px] rounded-2xl p-4 border border-[#EEEEEE] shadow-xl shadow-[#e1dcdc31] flex justify-between items-end">
       <div className="text-left">
-        <p className="text-xs">Insights</p>
+        <div className="flex items-center justify-start">
+          <div className="bg-ramos-grey  rounded-full mr-[9px] w-5 h-5 flex justify-center items-center">
+            <Image alt="user-connecting" src="/images/insight-icon.png" width={38} height={0} />
+          </div>
+          <p className="text-xs"> Insights</p>
+        </div>
         <p className="text-xs mt-14 text-ramos-grey-100">Total profit</p>
         <p className="text-2xl mt-2">$ 264.2K</p>
         <button className="min-w-[100px] self-start bg-ramos-yellow text-ramos-black rounded-lg py-2 px-3 mt-4 text-[9px]  shadow-lg">

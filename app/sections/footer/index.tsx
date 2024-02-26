@@ -23,13 +23,15 @@ export const Footer = () => {
             <div className="flex gap-20">
               <div className="flex flex-col gap-1">
                 <p className="text-white">Warrensville Heights</p>
-                <p className="text-[#939393] text-[13px] font-light">1418 Vineyard Drive, NC</p>
-                <p className="text-[#939393] text-[13px] font-light">44128</p>
+                <p className="text-ramos-grey-100 text-[13px] font-light">
+                  1418 Vineyard Drive, NC
+                </p>
+                <p className="text-ramos-grey-100 text-[13px] font-light">44128</p>
               </div>
               <div className="flex flex-col gap-1">
                 <p className="text-white">Saint Louis</p>
-                <p className="text-[#939393] text-[13px] font-light">1366 Penn Street</p>
-                <p className="text-[#939393] text-[13px] font-light">63101</p>
+                <p className="text-ramos-grey-100 text-[13px] font-light">1366 Penn Street</p>
+                <p className="text-ramos-grey-100 text-[13px] font-light">63101</p>
               </div>
             </div>
             <ul className="flex flex-col gap-3">
@@ -47,8 +49,8 @@ export const Footer = () => {
                 R
               </span>
             </h2>
-            <p className="text-[#939393] text-[13px] font-light">Privacy policy</p>
-            <p className="text-[#939393] text-[13px] font-light">License agreement</p>
+            <p className="text-ramos-grey-100 text-[13px] font-light">Privacy policy</p>
+            <p className="text-ramos-grey-100 text-[13px] font-light">License agreement</p>
             <div className="bg-white rounded-2xl p-1">
               <Image alt="bar-code" src="/images/barcode.png" width={100} height={0} />
             </div>

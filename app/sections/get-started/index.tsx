@@ -12,7 +12,7 @@ export const GetStarted = () => {
         initial={{ scale: 2 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative bg-[#FE4A22] rounded-[35px] shadow-lg shadow-[#fe4a229a] h-[100px] w-[100px] flex justify-center items-center"
+        className="relative bg-ramos-orange rounded-[35px] shadow-lg shadow-[#fe4a229a] h-[100px] w-[100px] flex justify-center items-center"
       >
         <Image alt="chain" src="/images/chain.png" width={45} height={0} objectFit="cover" />
       </motion.div>
